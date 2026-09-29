@@ -5,9 +5,15 @@ gateway for AI coding agents (Claude Code, Codex, Hermes, OpenClaw, ZeroClaw).
 
 ```bash
 brew tap tuzlu07x/foreman
+brew trust --formula tuzlu07x/foreman/foreman-agent
 brew install foreman-agent
 foreman setup
 ```
+
+Homebrew 7 and later refuse formulae from taps you haven't trusted
+(`Refusing to load formula … from untrusted tap`). `brew trust --formula`
+trusts this formula only, and `brew untrust --formula
+tuzlu07x/foreman/foreman-agent` takes it back.
 
 Upgrade with `brew upgrade foreman-agent`. The formula installs the
 [`foreman-agent`](https://www.npmjs.com/package/foreman-agent) npm package
